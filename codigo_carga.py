@@ -11,7 +11,7 @@ if __name__ == "__main__":
     # codigo principal
     setup_logger()    
     from tools.red_principal import *
-    path = "modelos/modelo 0.0.0.3/"
+    path = "modelos/modelo 0.0.5.3/"
     ventana_entrada = 4
     ventana_prediccion = 4
 

@@ -607,8 +607,8 @@ def calcular_resultados(ytest, prediccionesTest, carpeta):
     df_resultados = pd.DataFrame(resultados)
 
     # Calcular métricas globales
-    error_promedio_global = np.mean(df_resultados['error_promedio'])
-    desviacion_estandar_global = np.std(df_resultados['desviacion_estandar'])
+    error_promedio_global = np.mean(np.abs(errores_totales))
+    desviacion_estandar_global = np.std(errores_totales)
     error_relativo_porcentual_promedio = np.mean(df_resultados['error_relativo_porcentual'])
 
     # Calcular las métricas de errores menores a 1, 2, 3, 4, 5

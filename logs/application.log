@@ -171,3 +171,9 @@
 2024-12-11 12:59:03,650 - INFO - Creando ventanas.
 2024-12-11 12:59:04,836 - INFO - Ventanas creadas
 2024-12-11 12:59:04,839 - INFO - inicio prediccion
+2024-12-11 14:47:04,967 - ERROR - Error al cargar los datos: 'id'
+2024-12-11 14:47:05,154 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-11 14:47:05,154 - INFO - Creando ventanas.
+2024-12-11 14:47:06,427 - INFO - Ventanas creadas
+2024-12-11 14:48:06,422 - DEBUG - Creating converter from 5 to 3
+2024-12-11 18:17:16,917 - INFO - Assets written to: modelos/modelo 0.0.5.3\modelo\assets
