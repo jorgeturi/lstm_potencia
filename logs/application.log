@@ -136,3 +136,38 @@
 2024-12-11 00:12:56,779 - INFO - Ventanas creadas
 2024-12-11 00:50:32,085 - DEBUG - Creating converter from 5 to 3
 2024-12-11 08:05:13,691 - INFO - Assets written to: modelos/modelo 0.1.1.3\modelo\assets
+2024-12-11 11:36:03,889 - ERROR - Error al cargar los datos: 'id'
+2024-12-11 11:36:04,078 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-11 11:36:04,083 - INFO - Creando ventanas.
+2024-12-11 11:36:05,347 - INFO - Ventanas creadas
+2024-12-11 11:36:47,144 - DEBUG - Creating converter from 5 to 3
+2024-12-11 12:50:59,156 - INFO - Modelo cargado exitosamente desde modelos/modelo 0.0.0.3/modelo.
+2024-12-11 12:50:59,193 - INFO - Escaladores cargados exitosamente desde modelos/modelo 0.0.0.3/scalers.pkl.
+2024-12-11 12:50:59,816 - INFO - Datos cargados y filtrados. Total de registros: 96995
+2024-12-11 12:50:59,827 - INFO - Creando ventanas.
+2024-12-11 12:51:00,872 - INFO - Ventanas creadas
+2024-12-11 12:51:00,884 - INFO - inicio prediccion
+2024-12-11 12:53:13,354 - INFO - Modelo cargado exitosamente desde modelos/modelo 0.0.0.3/modelo.
+2024-12-11 12:53:13,373 - INFO - Escaladores cargados exitosamente desde modelos/modelo 0.0.0.3/scalers.pkl.
+2024-12-11 12:53:14,116 - INFO - Datos cargados y filtrados. Total de registros: 96995
+2024-12-11 12:53:14,122 - INFO - Creando ventanas.
+2024-12-11 12:53:15,179 - INFO - Ventanas creadas
+2024-12-11 12:53:15,190 - INFO - inicio prediccion
+2024-12-11 12:54:23,854 - INFO - Modelo cargado exitosamente desde modelos/modelo 0.0.0.3/modelo.
+2024-12-11 12:54:23,878 - INFO - Escaladores cargados exitosamente desde modelos/modelo 0.0.0.3/scalers.pkl.
+2024-12-11 12:54:24,437 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-11 12:54:24,449 - INFO - Creando ventanas.
+2024-12-11 12:54:25,591 - INFO - Ventanas creadas
+2024-12-11 12:54:25,594 - INFO - inicio prediccion
+2024-12-11 12:56:05,243 - INFO - Modelo cargado exitosamente desde modelos/modelo 0.0.0.3/modelo.
+2024-12-11 12:56:05,264 - INFO - Escaladores cargados exitosamente desde modelos/modelo 0.0.0.3/scalers.pkl.
+2024-12-11 12:56:05,783 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-11 12:56:05,789 - INFO - Creando ventanas.
+2024-12-11 12:56:06,905 - INFO - Ventanas creadas
+2024-12-11 12:56:06,918 - INFO - inicio prediccion
+2024-12-11 12:59:03,026 - INFO - Modelo cargado exitosamente desde modelos/modelo 0.0.0.3/modelo.
+2024-12-11 12:59:03,034 - INFO - Escaladores cargados exitosamente desde modelos/modelo 0.0.0.3/scalers.pkl.
+2024-12-11 12:59:03,642 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-11 12:59:03,650 - INFO - Creando ventanas.
+2024-12-11 12:59:04,836 - INFO - Ventanas creadas
+2024-12-11 12:59:04,839 - INFO - inicio prediccion
