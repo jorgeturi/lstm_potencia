@@ -134,3 +134,5 @@
 2024-12-11 00:12:53,794 - INFO - Datos cargados y filtrados. Total de registros: 101215
 2024-12-11 00:12:53,802 - INFO - Creando ventanas.
 2024-12-11 00:12:56,779 - INFO - Ventanas creadas
+2024-12-11 00:50:32,085 - DEBUG - Creating converter from 5 to 3
+2024-12-11 08:05:13,691 - INFO - Assets written to: modelos/modelo 0.1.1.3\modelo\assets
