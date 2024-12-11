@@ -1,0 +1,21 @@
+RangeIndex: 101229 entries, 0 to 101228
+Data columns (total 5 columns):
+ #   Column     Non-Null Count   Dtype
+---  ------     --------------   -----
+ 0   id         101229 non-null  int64
+ 1   activa     101218 non-null  float64
+ 2   reactiva   101218 non-null  float64
+ 3   aparente   101218 non-null  float64
+ 4   timestamp  101229 non-null  object
+dtypes: float64(3), int64(1), object(1)
+memory usage: 3.9+ MB
+None
+             id         activa       reactiva       aparente
+count  101229.0  101218.000000  101218.000000  101218.000000
+mean     2103.0      24.111910       9.547793      26.896049
+std         0.0      15.348944       3.680350      14.081252
+min      2103.0       1.500000       0.588000       2.088000
+25%      2103.0      14.664000       6.144000      18.440000
+50%      2103.0      18.708000      10.668000      21.684000
+75%      2103.0      26.784000      12.540000      28.707000
+max      2103.0     104.988000      16.380000     105.004000
