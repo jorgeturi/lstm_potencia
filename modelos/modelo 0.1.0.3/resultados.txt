@@ -1,4 +1,4 @@
-Resultados de la predicción para el modelo 0.1.1.3:
+Resultados de la predicción para el modelo 0.1.0.3:
 
 Error promedio global: 45.93
 Desviación estándar global: 12.04
