@@ -1,6 +1,6 @@
 Resultados de la predicción para el modelo 0.0.5.3:
 
-Error promedio global: 1.97
+Error promedio global: -0.14
 Desviación estándar global: 3.14
 Error relativo porcentual promedio global: 7.28%
 

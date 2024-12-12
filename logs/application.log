@@ -177,3 +177,32 @@
 2024-12-11 14:47:06,427 - INFO - Ventanas creadas
 2024-12-11 14:48:06,422 - DEBUG - Creating converter from 5 to 3
 2024-12-11 18:17:16,917 - INFO - Assets written to: modelos/modelo 0.0.5.3\modelo\assets
+2024-12-11 18:20:36,307 - INFO - Modelo cargado exitosamente desde modelos/modelo 0.0.5.3/modelo.
+2024-12-11 18:20:36,319 - INFO - Escaladores cargados exitosamente desde modelos/modelo 0.0.5.3/scalers.pkl.
+2024-12-11 18:20:36,537 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-11 18:20:36,537 - INFO - Creando ventanas.
+2024-12-11 18:20:36,960 - INFO - Ventanas creadas
+2024-12-11 18:20:36,971 - INFO - inicio prediccion
+2024-12-11 18:26:51,559 - ERROR - Error al cargar los datos: 'id'
+2024-12-11 18:26:51,744 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-11 18:26:51,749 - INFO - Creando ventanas.
+2024-12-11 18:26:53,056 - INFO - Ventanas creadas
+2024-12-11 18:27:59,484 - DEBUG - Creating converter from 5 to 3
+2024-12-11 21:51:18,957 - INFO - Assets written to: modelos/modelo 0.0.4.3\modelo\assets
+2024-12-11 22:35:04,541 - INFO - Modelo cargado exitosamente desde modelos/modelo 0.0.4.3/modelo.
+2024-12-11 22:35:04,556 - INFO - Escaladores cargados exitosamente desde modelos/modelo 0.0.4.3/scalers.pkl.
+2024-12-11 22:35:04,847 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-11 22:35:04,852 - INFO - Creando ventanas.
+2024-12-11 22:35:05,334 - INFO - Ventanas creadas
+2024-12-11 22:35:05,339 - INFO - inicio prediccion
+2024-12-11 22:35:05,721 - INFO - Modelo cargado exitosamente desde modelos/modelo 0.0.4.3/modelo.
+2024-12-11 22:35:05,736 - INFO - Escaladores cargados exitosamente desde modelos/modelo 0.0.4.3/scalers.pkl.
+2024-12-11 22:35:06,019 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-11 22:35:06,023 - INFO - Creando ventanas.
+2024-12-11 22:35:08,761 - INFO - Ventanas creadas
+2024-12-11 22:35:08,770 - INFO - inicio prediccion
+2024-12-11 22:42:48,226 - ERROR - Error al cargar los datos: 'id'
+2024-12-11 22:42:48,417 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-11 22:42:48,421 - INFO - Creando ventanas.
+2024-12-11 22:42:49,676 - INFO - Ventanas creadas
+2024-12-11 22:44:34,200 - DEBUG - Creating converter from 5 to 3
