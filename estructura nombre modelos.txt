@@ -38,3 +38,8 @@ D
 8 (256)(64)
 9 (64)(128)(256)(128)(64)
 10 a 29 IDEM mezclando train
+
+
+
+se guarda error promedio a ver si esta desplazado
+por columna se guarda el absoluto cometido

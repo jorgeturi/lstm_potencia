@@ -206,3 +206,41 @@
 2024-12-11 22:42:48,421 - INFO - Creando ventanas.
 2024-12-11 22:42:49,676 - INFO - Ventanas creadas
 2024-12-11 22:44:34,200 - DEBUG - Creating converter from 5 to 3
+2024-12-12 04:17:00,906 - INFO - Assets written to: modelos/modelo 0.0.3.3\modelo\assets
+2024-12-12 11:25:07,406 - INFO - Modelo cargado exitosamente desde modelos/modelo 0.0.3.3/modelo.
+2024-12-12 11:25:07,422 - INFO - Escaladores cargados exitosamente desde modelos/modelo 0.0.3.3/scalers.pkl.
+2024-12-12 11:25:07,645 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-12 11:25:07,651 - INFO - Creando ventanas.
+2024-12-12 11:25:08,950 - INFO - Ventanas creadas
+2024-12-12 11:25:08,957 - INFO - inicio prediccion
+2024-12-12 11:26:42,328 - ERROR - Error al cargar los datos: 'id'
+2024-12-12 11:26:42,519 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-12 11:26:42,526 - INFO - Creando ventanas.
+2024-12-12 11:26:43,920 - INFO - Ventanas creadas
+2024-12-12 11:29:15,801 - DEBUG - Creating converter from 5 to 3
+2024-12-12 20:12:48,285 - INFO - Assets written to: modelos/modelo 0.0.2.3\modelo\assets
+2024-12-12 20:28:56,226 - ERROR - Error al cargar los datos: 'id'
+2024-12-12 20:28:56,414 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-12 20:28:56,419 - INFO - Creando ventanas.
+2024-12-12 20:28:57,701 - INFO - Ventanas creadas
+2024-12-12 20:30:03,842 - ERROR - Error al cargar los datos: 'id'
+2024-12-12 20:30:04,026 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-12 20:30:04,030 - INFO - Creando ventanas.
+2024-12-12 20:30:05,292 - INFO - Ventanas creadas
+2024-12-12 20:30:35,595 - ERROR - Error al cargar los datos: 'id'
+2024-12-12 20:30:35,777 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-12 20:30:35,782 - INFO - Creando ventanas.
+2024-12-12 20:30:37,049 - INFO - Ventanas creadas
+2024-12-12 20:31:41,233 - DEBUG - Creating converter from 5 to 3
+2024-12-12 22:07:24,729 - INFO - Assets written to: modelos/modelo 0.0.2.3test\modelo\assets
+2024-12-12 22:24:53,805 - ERROR - Error al cargar los datos: 'id'
+2024-12-12 22:24:54,027 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-12 22:24:54,032 - INFO - Creando ventanas.
+2024-12-12 22:24:55,318 - INFO - Ventanas creadas
+2024-12-12 22:35:37,066 - DEBUG - Creating converter from 5 to 3
+2024-12-13 02:40:13,294 - INFO - Assets written to: modelos/modelo 0.0.0.2\modelo\assets
+2024-12-13 10:14:15,132 - ERROR - Error al cargar los datos: 'id'
+2024-12-13 10:14:15,330 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-13 10:14:15,336 - INFO - Creando ventanas.
+2024-12-13 10:14:16,600 - INFO - Ventanas creadas
+2024-12-13 10:14:36,358 - DEBUG - Creating converter from 5 to 3
