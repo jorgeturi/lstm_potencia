@@ -7,6 +7,7 @@ import os
 import shutil #para copiar archivo
 from sklearn.metrics import mean_absolute_error, r2_score
 import pickle
+import sys #para terminar 
 
 
 
@@ -686,11 +687,20 @@ def calcular_resultados(ytest, prediccionesTest, carpeta):
 
 
 def crear_carpeta_y_guardar(nombre_modelo):
-    # Crear la carpeta con el nombre del modelo
     carpeta = f"modelos/{nombre_modelo}"
+    
+    # Verificar si la carpeta ya existe
+    if os.path.exists(carpeta):
+        respuesta = input(f"La carpeta '{carpeta}' ya existe. ¿Deseas sobrescribirla? (s/n): ").strip().lower()
+        if respuesta != 's':
+            print("Operación cancelada. No se sobrescribió la carpeta.")
+            sys.exit(-1)
+            return None, None
+    
+    # Crear la carpeta con el nombre del modelo
     os.makedirs(carpeta, exist_ok=True)
 
-    # Copiar el script 'red_principal.py' a la carpeta
+    # Copiar los scripts a la carpeta
     ruta_script = 'tools/red_principal.py'  # Ruta del script
     destino_script = os.path.join(carpeta, 'red_principal.py')
     shutil.copy(ruta_script, destino_script)
@@ -702,11 +712,20 @@ def crear_carpeta_y_guardar(nombre_modelo):
     # Crear un archivo de resultados
     resultados_path = os.path.join(carpeta, 'resultados.txt')
 
+    # Si el archivo de resultados ya existe, preguntar si se desea sobrescribir
+    if os.path.exists(resultados_path):
+        respuesta = input(f"El archivo '{resultados_path}' ya existe. ¿Deseas sobrescribirlo? (s/n): ").strip().lower()
+        if respuesta != 's':
+            print("Operación cancelada. No se sobrescribió el archivo de resultados.")
+            return None, None
+    
     # Abrir el archivo de resultados para escribir
     with open(resultados_path, 'w') as f:
         f.write(f"Resultados de la predicción para el {nombre_modelo}:\n")
 
+    print(f"Carpeta '{carpeta}' y archivo de resultados creado exitosamente.")
     return carpeta, resultados_path
+
 
 def guardar_modelo_y_resultados(carpeta, modelo, scalers):
     # Guardar el modelo
