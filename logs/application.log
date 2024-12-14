@@ -283,3 +283,9 @@
 2024-12-13 19:21:58,479 - INFO - Ventanas creadas
 2024-12-13 19:30:55,935 - DEBUG - Creating converter from 5 to 3
 2024-12-14 01:45:41,948 - INFO - Assets written to: modelos/modelo 0.0.1.3\modelo\assets
+2024-12-14 11:11:24,861 - ERROR - Error al cargar los datos: 'id'
+2024-12-14 11:11:25,058 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-14 11:11:25,064 - INFO - Creando ventanas.
+2024-12-14 11:11:26,329 - INFO - Ventanas creadas
+2024-12-14 11:18:56,131 - DEBUG - Creating converter from 5 to 3
+2024-12-14 14:01:33,553 - INFO - Assets written to: modelos/modelo 0.0.0.0\modelo\assets
