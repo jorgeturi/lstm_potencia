@@ -784,7 +784,7 @@ def entrenar_modelo(Xtrain, ytrain, Xval, yval, path_guardado='modelo_entrenado.
     #model.add(BatchNormalization())
     #model.add(LSTM(128, return_sequences=True, kernel_initializer=initializer ) )
     #model.add(BatchNormalization())
-    model.add(LSTM(256, return_sequences=False, kernel_initializer=initializer ) )
+    model.add(LSTM(128, return_sequences=False, kernel_initializer=initializer ) )
     model.add(BatchNormalization())
 
     #model.add(Dropout(0.1))

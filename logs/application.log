@@ -373,3 +373,21 @@
 2024-12-26 12:06:02,134 - INFO - Ventanas creadas
 2024-12-26 12:07:15,373 - DEBUG - Creating converter from 5 to 3
 2024-12-26 15:22:05,830 - INFO - Assets written to: modelos/modelo 0.0.5.6\modelo\assets
+2024-12-27 21:33:56,585 - INFO - Modelo cargado exitosamente desde modelos/modelo 0.0.3.3/modelo.
+2024-12-27 21:33:56,629 - INFO - Escaladores cargados exitosamente desde modelos/modelo 0.0.3.3/scalers.pkl.
+2024-12-27 21:33:57,184 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-27 21:33:57,195 - INFO - Creando ventanas.
+2024-12-27 21:34:01,360 - INFO - Ventanas creadas
+2024-12-27 21:34:01,368 - INFO - inicio prediccion
+2024-12-27 21:35:27,761 - INFO - Modelo cargado exitosamente desde modelos/modelo 0.0.4.3/modelo.
+2024-12-27 21:35:27,802 - INFO - Escaladores cargados exitosamente desde modelos/modelo 0.0.4.3/scalers.pkl.
+2024-12-27 21:35:28,277 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-27 21:35:28,286 - INFO - Creando ventanas.
+2024-12-27 21:35:32,136 - INFO - Ventanas creadas
+2024-12-27 21:35:32,144 - INFO - inicio prediccion
+2024-12-28 13:42:24,690 - ERROR - Error al cargar los datos: 'id'
+2024-12-28 13:42:25,310 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2024-12-28 13:42:25,323 - INFO - Creando ventanas.
+2024-12-28 13:42:30,205 - INFO - Ventanas creadas
+2024-12-28 13:44:02,372 - DEBUG - Creating converter from 5 to 3
+2024-12-28 19:00:56,179 - INFO - Assets written to: modelos/modelo 0.0.5.7\modelo\assets

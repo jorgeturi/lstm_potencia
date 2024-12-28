@@ -11,7 +11,7 @@ if __name__ == "__main__":
     # codigo principal
     setup_logger()    
     from tools.red_principal import *
-    path = "modelos/modelo 0.0.3.3/"
+    path = "modelos/modelo 0.0.4.3/"
     ventana_entrada = 4
     ventana_prediccion = 4
 
@@ -131,7 +131,7 @@ if __name__ == "__main__":
             desviacion_estandar_global = np.std(df_resultados['error'])
 
             # Guardar a un archivo CSV
-            df_resultados.to_csv('resultados_predicciones_con_datos.csv', index=False)
+            #df_resultados.to_csv('resultados_predicciones_con_datos.csv', index=False)
 
             # Imprimir resultados globales
             print(f"Error promedio global: {error_promedio_global:.2f}")
