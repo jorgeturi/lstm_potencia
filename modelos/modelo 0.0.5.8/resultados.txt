@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo 0.0.5.8:
+
+Error promedio global: 0.14
+Desviación estándar global: 4.15
+Error relativo porcentual promedio global: 7.53%
+
+MAPE por columna: ['5.77%', '7.63%', '8.01%', '8.71%']
+MAPE promedio: 7.53
+R² por columna: ['0.95', '0.91', '0.91', '0.90']
+MAE por columna: ['1.74', '2.36', '2.39', '2.61']
+Desviación estándar por columna: ['3.36', '4.28', '4.27', '4.61']
+Cantidad de datos: 46424
+
+Cantidad de errores menores o iguales a 1: 19498 (42.00%)
+Cantidad de errores menores o iguales a 2: 31429 (67.70%)
+Cantidad de errores menores o iguales a 3: 37177 (80.08%)
+Cantidad de errores menores o iguales a 4: 40106 (86.39%)
+Cantidad de errores menores o iguales a 5: 41743 (89.92%)
+El error más grande cometido: 41.96
