@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo deeps:
+
+Error promedio global: -0.24
+Desviación estándar global: 3.43
+Error relativo porcentual promedio global: 7.74%
+
+MAPE por columna: ['7.02%', '7.32%', '7.92%', '8.69%']
+MAPE promedio: 7.74
+R² por columna: ['0.96', '0.96', '0.94', '0.92']
+MAE por columna: ['1.92', '2.02', '2.22', '2.48']
+Desviación estándar por columna: ['2.78', '3.08', '3.55', '4.14']
+Cantidad de datos: 46424
+
+Cantidad de errores menores o iguales a 1: 18328 (39.48%)
+Cantidad de errores menores o iguales a 2: 30409 (65.50%)
+Cantidad de errores menores o iguales a 3: 36639 (78.92%)
+Cantidad de errores menores o iguales a 4: 39896 (85.94%)
+Cantidad de errores menores o iguales a 5: 41790 (90.02%)
+El error más grande cometido: 33.14

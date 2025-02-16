@@ -775,18 +775,13 @@ def entrenar_modelo(Xtrain, ytrain, Xval, yval, path_guardado='modelo_entrenado.
     # Crear el modelo LSTM
     model = Sequential()
 
-    model.add(LSTM(512, return_sequences=True, input_shape=(Xtrain.shape[1], Xtrain.shape[2]), kernel_initializer=initializer ) )
+    model.add(LSTM(64, return_sequences=False, input_shape=(Xtrain.shape[1], Xtrain.shape[2]), kernel_initializer=initializer ) )
     #model.add(Dropout(0.1))
     model.add(BatchNormalization())
 
     #model.add(Dropout(0.2)) 
-    model.add(LSTM(256, return_sequences=True, kernel_initializer=initializer ) )
-    model.add(BatchNormalization())
-    model.add(LSTM(128, return_sequences=True, kernel_initializer=initializer ) )
-    model.add(BatchNormalization())
-    model.add(LSTM(64, return_sequences=False, kernel_initializer=initializer ) )
-    model.add(BatchNormalization())
-
+    #model.add(LSTM(256, return_sequences=True, kernel_initializer=initializer ) )
+    #model.add(BatchNormalization())
     #model.add(Dropout(0.1))
     #model.add(BatchNormalization())
     #model.add(LSTM(50, return_sequences=False, kernel_initializer=initializer ) )
@@ -807,7 +802,7 @@ def entrenar_modelo(Xtrain, ytrain, Xval, yval, path_guardado='modelo_entrenado.
 
     try:
         # Entrenar el modelo con datos de validación, EarlyStopping y ModelCheckpoint
-        model.fit(Xtrain, ytrain, epochs=300, verbose=1, batch_size=4,
+        model.fit(Xtrain, ytrain, epochs=300, verbose=1, batch_size=32,
                   validation_data=(Xval, yval), callbacks=[early_stopping, checkpoint])
     except MemoryError as e:
         print("Error de memoria: ", e)
@@ -819,4 +814,6 @@ def entrenar_modelo(Xtrain, ytrain, Xval, yval, path_guardado='modelo_entrenado.
         model.save(path_guardado)  # Guarda el modelo si ocurre otro error
 
     return model
+
+
 
