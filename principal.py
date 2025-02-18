@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     # nombre del modelo, con esto se crea la carpeta y archivos salida
     ## salida.entrada.bz.variacion
-    nombre_modelo = "modelo 0.3.3.0" 
+    nombre_modelo = "modelo 0.3.3.5" 
     
     carpeta, resultados_path = crear_carpeta_y_guardar(nombre_modelo)
 

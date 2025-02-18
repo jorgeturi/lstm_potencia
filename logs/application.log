@@ -617,3 +617,22 @@
 2025-02-15 15:26:43,900 - DEBUG - Creating converter from 5 to 3
 2025-02-16 01:55:04,342 - INFO - Assets written to: modelos/modelo 0.0.3.11\modelo\assets
 2025-02-16 02:28:26,100 - INFO - Assets written to: modelos/modelo 0.3.3.0\modelo\assets
+2025-02-16 09:31:22,163 - ERROR - Error al cargar los datos: 'id'
+2025-02-16 09:31:22,354 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2025-02-16 09:31:22,360 - INFO - Creando ventanas.
+2025-02-16 09:31:23,077 - INFO - Ventanas creadas
+2025-02-16 09:56:17,674 - DEBUG - Creating converter from 5 to 3
+2025-02-16 12:47:49,047 - ERROR - Error al cargar los datos: 'id'
+2025-02-16 12:47:49,638 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2025-02-16 12:47:49,652 - INFO - Creando ventanas.
+2025-02-16 12:47:51,987 - INFO - Ventanas creadas
+2025-02-16 13:11:15,121 - ERROR - Error al cargar los datos: 'id'
+2025-02-16 13:11:15,521 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2025-02-16 13:11:15,532 - INFO - Creando ventanas.
+2025-02-16 13:11:16,609 - INFO - Ventanas creadas
+2025-02-16 13:13:31,653 - ERROR - Error al cargar los datos: 'id'
+2025-02-16 13:13:32,087 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2025-02-16 13:13:32,104 - INFO - Creando ventanas.
+2025-02-16 13:13:33,396 - INFO - Ventanas creadas
+2025-02-16 13:31:01,061 - DEBUG - Creating converter from 5 to 3
+2025-02-18 08:41:24,702 - INFO - Assets written to: modelos/modelo 0.3.3.3\modelo\assets
