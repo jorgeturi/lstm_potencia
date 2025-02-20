@@ -15,14 +15,14 @@ if __name__ == "__main__":
 
     # nombre del modelo, con esto se crea la carpeta y archivos salida
     ## salida.entrada.bz.variacion
-    nombre_modelo = "modelo 0.4.3.3" 
+    nombre_modelo = "modelo 0.4.3.1test" 
     
     carpeta, resultados_path = crear_carpeta_y_guardar(nombre_modelo)
 
     # Procesamiento de los datos
     df = cargar_datos()
     dias = [0, 1, 2, 3, 4, 5, 6]  # 0 domingo
-    horas = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]  # Ejemplo de horas
+    horas = [7,8,9,10,11,12,13,14,15,16,17,18,19]  # Ejemplo de horas
     df = cargar_datos_especificos('potencias.csv', dias_semanales=dias, horas=horas)
     print("tengo estos datos ",df.shape)
     X, y = crear_ventana(df[000:200000], 192, 4)
@@ -30,11 +30,11 @@ if __name__ == "__main__":
             
     ####### SEPARACION DE DATOS
     inicio_train = 0
-    fin_train = 71500
+    fin_train = 31500
     inicio_val = fin_train+1
-    fin_val = fin_train+1+18100
+    fin_val = fin_train+1+8100
     inicio_test = fin_val+1
-    fin_test = inicio_test+1+11615
+    fin_test = inicio_test+1+1615
     # conjunto de validación
     Xval = X[inicio_val:fin_val]
     yval = y[inicio_val:fin_val]
