@@ -662,3 +662,32 @@
 2025-02-19 12:08:32,404 - INFO - Ventanas creadas
 2025-02-19 12:12:19,963 - DEBUG - Creating converter from 5 to 3
 2025-02-20 07:00:29,100 - INFO - Assets written to: modelos/modelo 0.4.3.1test\modelo\assets
+2025-02-20 17:55:08,291 - INFO - Assets written to: modelos/modelo 0.4.3.1\modelo\assets
+2025-02-22 19:46:35,797 - ERROR - Error al cargar los datos: 'id'
+2025-02-22 19:46:35,988 - INFO - Datos cargados y filtrados. Total de registros: 39139
+2025-02-22 19:46:35,988 - INFO - Creando ventanas.
+2025-02-22 19:46:36,258 - INFO - Ventanas creadas
+2025-02-22 19:49:18,179 - ERROR - Error al cargar los datos: 'id'
+2025-02-22 19:49:18,304 - INFO - Datos cargados y filtrados. Total de registros: 39139
+2025-02-22 19:49:18,306 - INFO - Creando ventanas.
+2025-02-22 19:49:18,522 - INFO - Ventanas creadas
+2025-02-22 19:50:59,803 - ERROR - Error al cargar los datos: 'id'
+2025-02-22 19:50:59,927 - INFO - Datos cargados y filtrados. Total de registros: 39139
+2025-02-22 19:50:59,929 - INFO - Creando ventanas.
+2025-02-22 19:51:00,148 - INFO - Ventanas creadas
+2025-02-22 19:53:01,033 - ERROR - Error al cargar los datos: 'id'
+2025-02-22 19:53:01,284 - INFO - Datos cargados y filtrados. Total de registros: 39139
+2025-02-22 19:53:01,294 - INFO - Creando ventanas.
+2025-02-22 19:53:01,809 - INFO - Ventanas creadas
+2025-02-22 20:17:35,308 - DEBUG - Creating converter from 5 to 3
+2025-02-22 20:20:46,693 - DEBUG - Creating converter from 5 to 3
+2025-02-23 10:05:42,398 - INFO - Assets written to: modelos/modelo 0.4.0.3test\modelo\assets
+2025-02-23 12:41:07,789 - INFO - Assets written to: modelos/modelo 0.4.0.3testmezcl\modelo\assets
+2025-02-23 14:48:30,330 - ERROR - Error al cargar los datos: 'id'
+2025-02-23 14:48:30,470 - INFO - Datos cargados y filtrados. Total de registros: 39139
+2025-02-23 14:48:30,473 - INFO - Creando ventanas.
+2025-02-23 14:48:30,799 - INFO - Ventanas creadas
+2025-02-23 14:49:19,956 - ERROR - Error al cargar los datos: 'id'
+2025-02-23 14:49:20,137 - INFO - Datos cargados y filtrados. Total de registros: 39139
+2025-02-23 14:49:20,137 - INFO - Creando ventanas.
+2025-02-23 14:49:20,582 - INFO - Ventanas creadas
