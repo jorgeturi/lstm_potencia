@@ -691,3 +691,7 @@
 2025-02-23 14:49:20,137 - INFO - Datos cargados y filtrados. Total de registros: 39139
 2025-02-23 14:49:20,137 - INFO - Creando ventanas.
 2025-02-23 14:49:20,582 - INFO - Ventanas creadas
+2025-02-23 15:01:42,062 - DEBUG - Creating converter from 5 to 3
+2025-02-23 15:01:42,767 - DEBUG - Creating converter from 5 to 3
+2025-02-24 12:08:02,217 - INFO - Assets written to: modelos/modelo 0.4.1.3test\modelo\assets
+2025-02-25 07:52:10,426 - INFO - Assets written to: modelos/modelo 0.4.1.3testmezcl\modelo\assets
