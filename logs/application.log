@@ -695,3 +695,20 @@
 2025-02-23 15:01:42,767 - DEBUG - Creating converter from 5 to 3
 2025-02-24 12:08:02,217 - INFO - Assets written to: modelos/modelo 0.4.1.3test\modelo\assets
 2025-02-25 07:52:10,426 - INFO - Assets written to: modelos/modelo 0.4.1.3testmezcl\modelo\assets
+2025-02-26 18:27:47,423 - ERROR - Error al cargar los datos: 'id'
+2025-02-26 18:27:47,646 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2025-02-26 18:27:47,656 - INFO - Creando ventanas.
+2025-02-26 18:27:48,461 - INFO - Ventanas creadas
+2025-02-26 18:36:33,672 - DEBUG - Creating converter from 5 to 3
+2025-02-26 18:45:34,883 - ERROR - Error al cargar los datos: 'id'
+2025-02-26 18:45:35,074 - INFO - Datos cargados y filtrados. Total de registros: 39139
+2025-02-26 18:45:35,077 - INFO - Creando ventanas.
+2025-02-26 18:45:35,334 - INFO - Ventanas creadas
+2025-02-26 18:52:56,644 - DEBUG - Creating converter from 5 to 3
+2025-02-27 09:28:54,525 - INFO - Assets written to: modelos/modelo 0.3.2.8dense\modelo\assets
+2025-02-27 12:17:56,563 - ERROR - Error al cargar los datos: 'id'
+2025-02-27 12:17:56,895 - INFO - Datos cargados y filtrados. Total de registros: 39139
+2025-02-27 12:17:56,897 - INFO - Creando ventanas.
+2025-02-27 12:17:57,353 - INFO - Ventanas creadas
+2025-02-27 12:24:55,472 - DEBUG - Creating converter from 5 to 3
+2025-02-27 20:23:31,947 - INFO - Assets written to: modelos/modelo 0.3.2.8densev2\modelo\assets
