@@ -775,23 +775,23 @@ def entrenar_modelo(Xtrain, ytrain, Xval, yval, path_guardado='modelo_entrenado.
     # Crear el modelo LSTM
     model = Sequential()
 
-    model.add(LSTM(256, return_sequences=False, input_shape=(Xtrain.shape[1], Xtrain.shape[2]), kernel_initializer=initializer ) )
+    model.add(LSTM(256, return_sequences=True, input_shape=(Xtrain.shape[1], Xtrain.shape[2]), kernel_initializer=initializer ) )
     #model.add(Dropout(0.1))
-    model.add(BatchNormalization())
+    #model.add(BatchNormalization())
 
     #model.add(Dropout(0.2)) 
     #model.add(Dense(256, activation="relu")) 
     #model.add(LSTM(64, return_sequences=False, kernel_initializer=initializer ) )
     #model.add(BatchNormalization())
-
-    #model.add(LSTM(64, return_sequences=False, kernel_initializer=initializer ) )
+    model.add(Dense(1024, activation="relu")) 
+    model.add(LSTM(64, return_sequences=False, kernel_initializer=initializer ) )
     #model.add(BatchNormalization())
     #model.add(Dropout(0.1))
     #model.add(BatchNormalization())
     #model.add(LSTM(50, return_sequences=False, kernel_initializer=initializer ) )
     #model.add(Dropout(0.1))
     #model.add(BatchNormalization())
-    #model.add(Dense(ytrain.shape[1], activation="relu")) 
+    
     model.add(Dense(ytrain.shape[1], activation="relu"))
 
     # Compilar el modelo con el optimizador personalizado
@@ -806,7 +806,7 @@ def entrenar_modelo(Xtrain, ytrain, Xval, yval, path_guardado='modelo_entrenado.
 
     try:
         # Entrenar el modelo con datos de validación, EarlyStopping y ModelCheckpoint
-        model.fit(Xtrain, ytrain, epochs=300, verbose=1, batch_size=64,
+        model.fit(Xtrain, ytrain, epochs=30, verbose=1, batch_size=16,
                   validation_data=(Xval, yval), callbacks=[early_stopping, checkpoint])
     except MemoryError as e:
         print("Error de memoria: ", e)

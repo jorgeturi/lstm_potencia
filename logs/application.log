@@ -712,3 +712,30 @@
 2025-02-27 12:17:57,353 - INFO - Ventanas creadas
 2025-02-27 12:24:55,472 - DEBUG - Creating converter from 5 to 3
 2025-02-27 20:23:31,947 - INFO - Assets written to: modelos/modelo 0.3.2.8densev2\modelo\assets
+2025-02-28 18:10:59,156 - ERROR - Error al cargar los datos: 'id'
+2025-02-28 18:10:59,643 - INFO - Datos cargados y filtrados. Total de registros: 101215
+2025-02-28 18:10:59,650 - INFO - Creando ventanas.
+2025-02-28 18:11:01,700 - INFO - Ventanas creadas
+2025-02-28 18:11:34,533 - INFO - Assets written to: modelos/modelo 0.3.2.5\modelo\assets
+2025-02-28 18:19:39,751 - DEBUG - Creating converter from 5 to 3
+2025-02-28 18:21:29,921 - ERROR - Error al cargar los datos: 'id'
+2025-02-28 18:21:30,228 - INFO - Datos cargados y filtrados. Total de registros: 39139
+2025-02-28 18:21:30,238 - INFO - Creando ventanas.
+2025-02-28 18:21:30,491 - INFO - Ventanas creadas
+2025-02-28 18:21:45,655 - DEBUG - Creating converter from 5 to 3
+2025-02-28 18:22:24,875 - ERROR - Error al cargar los datos: 'id'
+2025-02-28 18:22:25,109 - INFO - Datos cargados y filtrados. Total de registros: 39139
+2025-02-28 18:22:25,126 - INFO - Creando ventanas.
+2025-02-28 18:22:25,342 - INFO - Ventanas creadas
+2025-02-28 18:22:55,030 - DEBUG - Creating converter from 5 to 3
+2025-02-28 18:24:44,106 - ERROR - Error al cargar los datos: 'id'
+2025-02-28 18:24:45,334 - INFO - Datos cargados y filtrados. Total de registros: 39139
+2025-02-28 18:24:45,358 - INFO - Creando ventanas.
+2025-02-28 18:24:46,516 - INFO - Ventanas creadas
+2025-02-28 18:26:19,854 - ERROR - Error al cargar los datos: 'id'
+2025-02-28 18:26:20,187 - INFO - Datos cargados y filtrados. Total de registros: 39139
+2025-02-28 18:26:20,203 - INFO - Creando ventanas.
+2025-02-28 18:26:20,487 - INFO - Ventanas creadas
+2025-02-28 18:28:13,266 - DEBUG - Creating converter from 5 to 3
+2025-02-28 19:07:51,116 - INFO - Assets written to: modelos/modelo 0.0.2.8v3f\modelo\assets
+2025-02-28 20:30:58,994 - INFO - Assets written to: modelos/modelo 0.0.3.8v3\modelo\assets
