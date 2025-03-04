@@ -750,8 +750,13 @@ def guardar_modelo_y_resultados(carpeta, modelo, scalers):
 
 
 
+import tensorflow.keras.backend as K
 
-
+def exponential_weighted_huber_loss(y_true, y_pred):
+    weights = K.exp(K.constant([0.1, 0.2, 0.3, 0.8]))  # La última predicción recibe una penalización mucho mayor
+    huber = tf.keras.losses.Huber()
+    loss = huber(y_true, y_pred) * weights
+    return K.mean(loss)
 
 
 
@@ -764,8 +769,8 @@ def entrenar_modelo(Xtrain, ytrain, Xval, yval, path_guardado='modelo_entrenado.
     initializer = GlorotUniform(seed=47)
 
     # Define los intervalos y los valores de learning rate
-    boundaries = [5, 10, 20, 50, 100, 250]  # Los límites de los intervalos (épocas en este caso)
-    values = [0.005, 0.002, 0.001, 0.0001, 0.00005, 0.00001, 0.000001]  # Learning rates correspondientes a los intervalos
+    boundaries = [5, 10, 80, 120, 180, 250]  # Los límites de los intervalos (épocas en este caso)
+    values = [0.001, 0.0001, 0.00001, 0.000001, 0.00005, 0.00001, 0.000001]  # Learning rates correspondientes a los intervalos
 
     # Crea el scheduler de learning rate
     lr_schedule = tf.keras.optimizers.schedules.PiecewiseConstantDecay(
@@ -775,7 +780,7 @@ def entrenar_modelo(Xtrain, ytrain, Xval, yval, path_guardado='modelo_entrenado.
     # Crear el modelo LSTM
     model = Sequential()
 
-    model.add(LSTM(256, return_sequences=True, input_shape=(Xtrain.shape[1], Xtrain.shape[2]), kernel_initializer=initializer ) )
+    model.add(LSTM(100, return_sequences=False, input_shape=(Xtrain.shape[1], Xtrain.shape[2]), kernel_initializer=initializer ) )
     #model.add(Dropout(0.1))
     #model.add(BatchNormalization())
 
@@ -783,8 +788,8 @@ def entrenar_modelo(Xtrain, ytrain, Xval, yval, path_guardado='modelo_entrenado.
     #model.add(Dense(256, activation="relu")) 
     #model.add(LSTM(64, return_sequences=False, kernel_initializer=initializer ) )
     #model.add(BatchNormalization())
-    model.add(Dense(1024, activation="relu")) 
-    model.add(LSTM(64, return_sequences=False, kernel_initializer=initializer ) )
+    #model.add(Dense(1024, activation="relu")) 
+    #model.add(LSTM(64, return_sequences=False, kernel_initializer=initializer ) )
     #model.add(BatchNormalization())
     #model.add(Dropout(0.1))
     #model.add(BatchNormalization())
@@ -796,7 +801,7 @@ def entrenar_modelo(Xtrain, ytrain, Xval, yval, path_guardado='modelo_entrenado.
 
     # Compilar el modelo con el optimizador personalizado
     optimizer = Adam(learning_rate=lr_schedule, clipnorm=1)
-    model.compile(optimizer=optimizer, loss='huber_loss')
+    model.compile(optimizer=optimizer, loss=exponential_weighted_huber_loss)
 
     # EarlyStopping para evitar sobreajuste
     early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
@@ -806,7 +811,7 @@ def entrenar_modelo(Xtrain, ytrain, Xval, yval, path_guardado='modelo_entrenado.
 
     try:
         # Entrenar el modelo con datos de validación, EarlyStopping y ModelCheckpoint
-        model.fit(Xtrain, ytrain, epochs=30, verbose=1, batch_size=16,
+        model.fit(Xtrain, ytrain, epochs=300, verbose=1, batch_size=16,
                   validation_data=(Xval, yval), callbacks=[early_stopping, checkpoint])
     except MemoryError as e:
         print("Error de memoria: ", e)
