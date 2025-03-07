@@ -16,7 +16,7 @@ if __name__ == "__main__":
     # nombre del modelo, con esto se crea la carpeta y archivos salida
     ## salida.entrada.bz.variacion
     #f fast 30 epocs
-    nombre_modelo = "modelo 0.4.1.00fb" 
+    nombre_modelo = "modelo 0.1.1.6fb" 
     
     carpeta, resultados_path = crear_carpeta_y_guardar(nombre_modelo)
 
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     horas = [8,9,10,11,12,13,14,15,16,17,18,19,20]  # Ejemplo de horas
     df = cargar_datos_especificos('potencias.csv', dias_semanales=dias, horas=horas)
     print("tengo estos datos ",df.shape)
-    X, y = crear_ventana(df[000:200000], 192, 4)
+    X, y = crear_ventana(df[000:200000], 24, 4)
 
             
     ####### SEPARACION DE DATOS
