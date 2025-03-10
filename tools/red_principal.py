@@ -761,7 +761,7 @@ def entrenar_modelo(Xtrain, ytrain, Xval, yval, path_guardado='modelo_entrenado.
 
     # Define los intervalos y los valores de learning rate
     boundaries = [5, 10, 20, 50, 100, 250]  # Los límites de los intervalos (épocas en este caso)
-    values = [0.001, 0.0001, 0.00005, 0.00001, 0.000005, 0.000001, 0.0000001]  # Learning rates correspondientes a los intervalos
+    values = [0.005, 0.002, 0.001, 0.0001, 0.00005, 0.00001, 0.000001]  # Learning rates correspondientes a los intervalos
 
     # Crea el scheduler de learning rate
     lr_schedule = tf.keras.optimizers.schedules.PiecewiseConstantDecay(
@@ -800,7 +800,7 @@ def entrenar_modelo(Xtrain, ytrain, Xval, yval, path_guardado='modelo_entrenado.
 
     try:
         # Entrenar el modelo con datos de validación, EarlyStopping y ModelCheckpoint
-        model.fit(Xtrain, ytrain, epochs=600, verbose=1, batch_size=32,
+        model.fit(Xtrain, ytrain, epochs=600, verbose=1, batch_size=4,
                   validation_data=(Xval, yval), callbacks=[early_stopping, checkpoint])
     except MemoryError as e:
         print("Error de memoria: ", e)
