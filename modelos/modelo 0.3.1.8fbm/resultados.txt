@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo 0.3.1.8fbm:
+
+Error promedio global: 16.93
+Desviación estándar global: 7.14
+Error relativo porcentual promedio global: 66.97%
+
+MAPE por columna: ['62.09%', '64.86%', '70.79%', '70.16%']
+MAPE promedio: 66.97
+R² por columna: ['0.13', '0.09', '-0.04', '-0.05']
+MAE por columna: ['16.74', '16.87', '17.99', '18.09']
+Desviación estándar por columna: ['5.49', '6.96', '7.27', '8.47']
+Cantidad de datos: 28004
+
+Cantidad de errores menores o iguales a 1: 218 (0.78%)
+Cantidad de errores menores o iguales a 2: 446 (1.59%)
+Cantidad de errores menores o iguales a 3: 663 (2.37%)
+Cantidad de errores menores o iguales a 4: 915 (3.27%)
+Cantidad de errores menores o iguales a 5: 1197 (4.27%)
+El error más grande cometido: 42.85
