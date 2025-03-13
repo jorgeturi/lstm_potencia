@@ -11,7 +11,7 @@ if __name__ == "__main__":
     # codigo principal
     setup_logger()    
     from tools.red_principal import *
-    path = "modelos/modelo 01.2.3.1fbgru/"
+    path = "modelos/modelo 01.2.3.4fb/"
     ventana_entrada = 48
     ventana_prediccion = 1
 
@@ -31,9 +31,9 @@ if __name__ == "__main__":
             print("tengo datos: ",len(X))
             ####### SEPARACION DE DATOS
             inicio_train = 0
-            fin_train = 25000
+            fin_train = 5000
             inicio_val = fin_train+1
-            fin_val = fin_train+1+7000
+            fin_val = fin_train+1+2000
             inicio_test = fin_val+1
             fin_test = inicio_test+1+7000
             # conjunto de validación
@@ -192,7 +192,7 @@ if __name__ == "__main__":
         import matplotlib.pyplot as plt
 
     # Definir el rango que deseas graficar
-    start = 50  # Índice inicial
+    start = 10  # Índice inicial
     end = 100   # Índice final
 
     # Crear una figura con dos subplots
@@ -220,3 +220,4 @@ if __name__ == "__main__":
 
     # Mostrar el gráfico
     plt.show()
+   
