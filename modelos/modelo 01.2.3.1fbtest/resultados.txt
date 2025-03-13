@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo 01.2.3.1fbtest:
+
+Error promedio global: -0.00
+Desviación estándar global: 0.13
+Error relativo porcentual promedio global: 5.76%
+
+MAPE por columna: ['13.88%', '7.19%', '1.11%', '0.86%']
+MAPE promedio: 5.76
+R² por columna: ['0.97', '0.99', '0.99', '0.99']
+MAE por columna: ['0.14', '0.09', '0.07', '0.09']
+Desviación estándar por columna: ['0.17', '0.11', '0.08', '0.06']
+Cantidad de datos: 16004
+
+Cantidad de errores menores o iguales a 1: 16000 (99.98%)
+Cantidad de errores menores o iguales a 2: 16004 (100.00%)
+Cantidad de errores menores o iguales a 3: 16004 (100.00%)
+Cantidad de errores menores o iguales a 4: 16004 (100.00%)
+Cantidad de errores menores o iguales a 5: 16004 (100.00%)
+El error más grande cometido: 1.14

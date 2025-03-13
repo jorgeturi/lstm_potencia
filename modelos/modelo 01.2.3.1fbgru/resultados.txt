@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo 01.2.3.1fbgru:
+
+Error promedio global: 0.08
+Desviación estándar global: 3.49
+Error relativo porcentual promedio global: 7.88%
+
+MAPE por columna: ['7.88%']
+MAPE promedio: 7.88
+R² por columna: ['0.97']
+MAE por columna: ['2.44']
+Desviación estándar por columna: ['3.49']
+Cantidad de datos: 7001
+
+Cantidad de errores menores o iguales a 1: 2164 (30.91%)
+Cantidad de errores menores o iguales a 2: 3814 (54.48%)
+Cantidad de errores menores o iguales a 3: 4981 (71.15%)
+Cantidad de errores menores o iguales a 4: 5765 (82.35%)
+Cantidad de errores menores o iguales a 5: 6227 (88.94%)
+El error más grande cometido: 29.49
