@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo lunesadamlstm34:
+
+Error promedio global: 0.46
+Desviación estándar global: 4.58
+Error relativo porcentual promedio global: 10.64%
+
+MAPE por columna: ['10.64%']
+MAPE promedio: 10.64
+R² por columna: ['0.95']
+MAE por columna: ['3.01']
+Desviación estándar por columna: ['4.58']
+Cantidad de datos: 1001
+
+Cantidad de errores menores o iguales a 1: 299 (29.87%)
+Cantidad de errores menores o iguales a 2: 523 (52.25%)
+Cantidad de errores menores o iguales a 3: 660 (65.93%)
+Cantidad de errores menores o iguales a 4: 765 (76.42%)
+Cantidad de errores menores o iguales a 5: 842 (84.12%)
+El error más grande cometido: 32.22

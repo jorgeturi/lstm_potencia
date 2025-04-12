@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo 5dias:
+
+Error promedio global: 1.10
+Desviación estándar global: 2.61
+Error relativo porcentual promedio global: 14.05%
+
+MAPE por columna: ['14.05%']
+MAPE promedio: 14.05
+R² por columna: ['0.92']
+MAE por columna: ['2.23']
+Desviación estándar por columna: ['2.61']
+Cantidad de datos: 11616
+
+Cantidad de errores menores o iguales a 1: 2768 (23.83%)
+Cantidad de errores menores o iguales a 2: 6176 (53.17%)
+Cantidad de errores menores o iguales a 3: 8899 (76.61%)
+Cantidad de errores menores o iguales a 4: 10279 (88.49%)
+Cantidad de errores menores o iguales a 5: 10851 (93.41%)
+El error más grande cometido: 16.21

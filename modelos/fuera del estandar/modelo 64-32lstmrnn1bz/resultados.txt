@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo 64-32lstmrnn1bz:
+
+Error promedio global: 0.14
+Desviación estándar global: 4.30
+Error relativo porcentual promedio global: 9.49%
+
+MAPE por columna: ['9.49%']
+MAPE promedio: 9.49
+R² por columna: ['0.96']
+MAE por columna: ['2.93']
+Desviación estándar por columna: ['4.30']
+Cantidad de datos: 1001
+
+Cantidad de errores menores o iguales a 1: 287 (28.67%)
+Cantidad de errores menores o iguales a 2: 484 (48.35%)
+Cantidad de errores menores o iguales a 3: 642 (64.14%)
+Cantidad de errores menores o iguales a 4: 759 (75.82%)
+Cantidad de errores menores o iguales a 5: 847 (84.62%)
+El error más grande cometido: 30.42

@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo 01.1.1.3fbol2:
+
+Error promedio global: -0.09
+Desviación estándar global: 1.13
+Error relativo porcentual promedio global: 2.48%
+
+MAPE por columna: ['2.48%']
+MAPE promedio: 2.48
+R² por columna: ['1.00']
+MAE por columna: ['0.79']
+Desviación estándar por columna: ['1.13']
+Cantidad de datos: 1001
+
+Cantidad de errores menores o iguales a 1: 734 (73.33%)
+Cantidad de errores menores o iguales a 2: 941 (94.01%)
+Cantidad de errores menores o iguales a 3: 980 (97.90%)
+Cantidad de errores menores o iguales a 4: 990 (98.90%)
+Cantidad de errores menores o iguales a 5: 995 (99.40%)
+El error más grande cometido: 9.14

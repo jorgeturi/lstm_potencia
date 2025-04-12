@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo lunesadamrnn:
+
+Error promedio global: 0.27
+Desviación estándar global: 2.92
+Error relativo porcentual promedio global: 6.23%
+
+MAPE por columna: ['6.23%']
+MAPE promedio: 6.23
+R² por columna: ['0.98']
+MAE por columna: ['1.78']
+Desviación estándar por columna: ['2.92']
+Cantidad de datos: 1001
+
+Cantidad de errores menores o iguales a 1: 470 (46.95%)
+Cantidad de errores menores o iguales a 2: 729 (72.83%)
+Cantidad de errores menores o iguales a 3: 851 (85.01%)
+Cantidad de errores menores o iguales a 4: 913 (91.21%)
+Cantidad de errores menores o iguales a 5: 937 (93.61%)
+El error más grande cometido: 21.75

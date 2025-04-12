@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo 1hora:
+
+Error promedio global: 0.17
+Desviación estándar global: 2.28
+Error relativo porcentual promedio global: 11.71%
+
+MAPE por columna: ['11.71%']
+MAPE promedio: 11.71
+R² por columna: ['0.95']
+MAE por columna: ['1.77']
+Desviación estándar por columna: ['2.28']
+Cantidad de datos: 12144
+
+Cantidad de errores menores o iguales a 1: 4239 (34.91%)
+Cantidad de errores menores o iguales a 2: 7960 (65.55%)
+Cantidad de errores menores o iguales a 3: 10008 (82.41%)
+Cantidad de errores menores o iguales a 4: 11234 (92.51%)
+Cantidad de errores menores o iguales a 5: 11870 (97.74%)
+El error más grande cometido: 43.83

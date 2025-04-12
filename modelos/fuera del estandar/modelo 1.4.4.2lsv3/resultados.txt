@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo 1.4.4.2lsv3:
+
+Error promedio global: -4.83
+Desviación estándar global: 11.05
+Error relativo porcentual promedio global: 24.90%
+
+MAPE por columna: ['12.15%', '12.18%', '14.12%', '13.96%', '15.55%', '17.44%', '17.79%', '28.67%', '22.77%', '24.77%', '27.06%', '25.93%', '25.44%', '26.77%', '27.54%', '30.07%', '28.88%', '30.76%', '30.72%', '31.21%', '35.08%', '32.63%', '33.55%', '32.54%']
+MAPE promedio: 24.90
+R² por columna: ['0.90', '0.90', '0.92', '0.88', '0.85', '0.81', '0.82', '0.56', '0.76', '0.63', '0.55', '0.58', '0.60', '0.62', '0.53', '0.58', '0.42', '0.39', '0.45', '0.41', '0.24', '0.25', '0.27', '0.24']
+MAE por columna: ['4.91', '4.75', '3.96', '5.08', '5.53', '6.24', '6.03', '10.31', '6.87', '8.96', '9.88', '9.28', '8.95', '8.84', '9.79', '9.30', '10.77', '11.24', '10.55', '10.96', '12.90', '12.44', '12.37', '12.41']
+Desviación estándar por columna: ['3.86', '4.35', '5.23', '5.53', '6.29', '6.97', '7.69', '8.11', '9.22', '9.50', '9.96', '10.93', '11.10', '11.59', '12.09', '12.27', '12.66', '13.06', '13.46', '13.55', '13.80', '14.26', '14.29', '14.67']
+Cantidad de datos: 27624
+
+Cantidad de errores menores o iguales a 1: 2295 (8.31%)
+Cantidad de errores menores o iguales a 2: 4693 (16.99%)
+Cantidad de errores menores o iguales a 3: 6952 (25.17%)
+Cantidad de errores menores o iguales a 4: 9171 (33.20%)
+Cantidad de errores menores o iguales a 5: 11202 (40.55%)
+El error más grande cometido: 63.78

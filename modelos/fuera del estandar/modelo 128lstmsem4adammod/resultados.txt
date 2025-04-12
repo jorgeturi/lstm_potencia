@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo 128lstmsem4adammod:
+
+Error promedio global: -0.02
+Desviación estándar global: 4.28
+Error relativo porcentual promedio global: 10.16%
+
+MAPE por columna: ['10.16%']
+MAPE promedio: 10.16
+R² por columna: ['0.96']
+MAE por columna: ['3.02']
+Desviación estándar por columna: ['4.28']
+Cantidad de datos: 1001
+
+Cantidad de errores menores o iguales a 1: 233 (23.28%)
+Cantidad de errores menores o iguales a 2: 451 (45.05%)
+Cantidad de errores menores o iguales a 3: 622 (62.14%)
+Cantidad de errores menores o iguales a 4: 747 (74.63%)
+Cantidad de errores menores o iguales a 5: 848 (84.72%)
+El error más grande cometido: 30.71

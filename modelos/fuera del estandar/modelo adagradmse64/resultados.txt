@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo adagradmse64:
+
+Error promedio global: 0.94
+Desviación estándar global: 2.41
+Error relativo porcentual promedio global: 12.62%
+
+MAPE por columna: ['12.62%']
+MAPE promedio: 12.62
+R² por columna: ['0.94']
+MAE por columna: ['2.02']
+Desviación estándar por columna: ['2.41']
+Cantidad de datos: 11616
+
+Cantidad de errores menores o iguales a 1: 3186 (27.43%)
+Cantidad de errores menores o iguales a 2: 6900 (59.40%)
+Cantidad de errores menores o iguales a 3: 9360 (80.58%)
+Cantidad de errores menores o iguales a 4: 10542 (90.75%)
+Cantidad de errores menores o iguales a 5: 10991 (94.62%)
+El error más grande cometido: 16.25

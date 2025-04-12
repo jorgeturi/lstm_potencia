@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo 01.1.1.3fbo:
+
+Error promedio global: 4.37
+Desviación estándar global: 6.22
+Error relativo porcentual promedio global: 25.47%
+
+MAPE por columna: ['25.47%']
+MAPE promedio: 25.47
+R² por columna: ['0.73']
+MAE por columna: ['6.18']
+Desviación estándar por columna: ['6.22']
+Cantidad de datos: 1001
+
+Cantidad de errores menores o iguales a 1: 85 (8.49%)
+Cantidad de errores menores o iguales a 2: 156 (15.58%)
+Cantidad de errores menores o iguales a 3: 260 (25.97%)
+Cantidad de errores menores o iguales a 4: 363 (36.26%)
+Cantidad de errores menores o iguales a 5: 455 (45.45%)
+El error más grande cometido: 26.87

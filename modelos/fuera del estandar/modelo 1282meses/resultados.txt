@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo 1282meses:
+
+Error promedio global: 0.73
+Desviación estándar global: 4.12
+Error relativo porcentual promedio global: 10.78%
+
+MAPE por columna: ['10.78%']
+MAPE promedio: 10.78
+R² por columna: ['0.94']
+MAE por columna: ['3.10']
+Desviación estándar por columna: ['4.12']
+Cantidad de datos: 1001
+
+Cantidad de errores menores o iguales a 1: 216 (21.58%)
+Cantidad de errores menores o iguales a 2: 423 (42.26%)
+Cantidad de errores menores o iguales a 3: 596 (59.54%)
+Cantidad de errores menores o iguales a 4: 722 (72.13%)
+Cantidad de errores menores o iguales a 5: 818 (81.72%)
+El error más grande cometido: 28.26

@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo lunesadamlstmchica:
+
+Error promedio global: 1.19
+Desviación estándar global: 7.00
+Error relativo porcentual promedio global: 20.16%
+
+MAPE por columna: ['20.16%']
+MAPE promedio: 20.16
+R² por columna: ['0.88']
+MAE por columna: ['4.93']
+Desviación estándar por columna: ['7.00']
+Cantidad de datos: 1001
+
+Cantidad de errores menores o iguales a 1: 156 (15.58%)
+Cantidad de errores menores o iguales a 2: 315 (31.47%)
+Cantidad de errores menores o iguales a 3: 467 (46.65%)
+Cantidad de errores menores o iguales a 4: 561 (56.04%)
+Cantidad de errores menores o iguales a 5: 665 (66.43%)
+El error más grande cometido: 41.14

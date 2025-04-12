@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo test2lunes3adam:
+
+Error promedio global: 0.62
+Desviación estándar global: 4.13
+Error relativo porcentual promedio global: 10.74%
+
+MAPE por columna: ['10.74%']
+MAPE promedio: 10.74
+R² por columna: ['0.96']
+MAE por columna: ['2.93']
+Desviación estándar por columna: ['4.13']
+Cantidad de datos: 1001
+
+Cantidad de errores menores o iguales a 1: 249 (24.88%)
+Cantidad de errores menores o iguales a 2: 460 (45.95%)
+Cantidad de errores menores o iguales a 3: 643 (64.24%)
+Cantidad de errores menores o iguales a 4: 783 (78.22%)
+Cantidad de errores menores o iguales a 5: 853 (85.21%)
+El error más grande cometido: 28.71

@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo lunesadamlstm34sinsuav:
+
+Error promedio global: 0.58
+Desviación estándar global: 5.09
+Error relativo porcentual promedio global: 13.10%
+
+MAPE por columna: ['13.10%']
+MAPE promedio: 13.10
+R² por columna: ['0.94']
+MAE por columna: ['3.58']
+Desviación estándar por columna: ['5.09']
+Cantidad de datos: 1001
+
+Cantidad de errores menores o iguales a 1: 216 (21.58%)
+Cantidad de errores menores o iguales a 2: 414 (41.36%)
+Cantidad de errores menores o iguales a 3: 575 (57.44%)
+Cantidad de errores menores o iguales a 4: 688 (68.73%)
+Cantidad de errores menores o iguales a 5: 774 (77.32%)
+El error más grande cometido: 29.57

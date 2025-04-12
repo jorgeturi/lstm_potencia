@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo 2diasprevotroscaler2:
+
+Error promedio global: 0.23
+Desviación estándar global: 2.26
+Error relativo porcentual promedio global: 11.39%
+
+MAPE por columna: ['11.39%']
+MAPE promedio: 11.39
+R² por columna: ['0.95']
+MAE por columna: ['1.75']
+Desviación estándar por columna: ['2.26']
+Cantidad de datos: 12100
+
+Cantidad de errores menores o iguales a 1: 4350 (35.95%)
+Cantidad de errores menores o iguales a 2: 8083 (66.80%)
+Cantidad de errores menores o iguales a 3: 9958 (82.30%)
+Cantidad de errores menores o iguales a 4: 11148 (92.13%)
+Cantidad de errores menores o iguales a 5: 11790 (97.44%)
+El error más grande cometido: 42.46

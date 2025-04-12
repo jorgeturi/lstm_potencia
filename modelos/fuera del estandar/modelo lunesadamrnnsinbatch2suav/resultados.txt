@@ -1,0 +1,19 @@
+Resultados de la predicción para el modelo lunesadamrnnsinbatch2suav:
+
+Error promedio global: 2.50
+Desviación estándar global: 6.88
+Error relativo porcentual promedio global: 25.41%
+
+MAPE por columna: ['25.41%']
+MAPE promedio: 25.41
+R² por columna: ['0.88']
+MAE por columna: ['5.31']
+Desviación estándar por columna: ['6.88']
+Cantidad de datos: 1001
+
+Cantidad de errores menores o iguales a 1: 167 (16.68%)
+Cantidad de errores menores o iguales a 2: 291 (29.07%)
+Cantidad de errores menores o iguales a 3: 421 (42.06%)
+Cantidad de errores menores o iguales a 4: 533 (53.25%)
+Cantidad de errores menores o iguales a 5: 615 (61.44%)
+El error más grande cometido: 28.09
