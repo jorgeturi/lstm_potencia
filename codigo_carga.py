@@ -12,10 +12,10 @@ if __name__ == "__main__":
     setup_logger()    
     from tools.red_principal import *
     
-    path = "modelos/modelo 0.0.3.4/"
+    path = "modelos/modelo 0.0.3.5/"
     ventana_entrada = 4
     
-    ventana_prediccion = 14
+    ventana_prediccion = 4
 
 
     modelo = cargar_modelo(path + "modelo")
@@ -74,13 +74,14 @@ if __name__ == "__main__":
 
             #X, y = crear_ventana(df[0:200000], ventana_entrada, ventana_prediccion)
             print("tengo datos: ",len(X))
+            print("el shape es:", X.shape)
             ####### SEPARACION DE DATOS
             inicio_train = 0
-            fin_train = 71500
+            fin_train = 71500#17875#71500
             inicio_val = fin_train+1
-            fin_val = fin_train+1+18100
+            fin_val = fin_train+1+18100#4525#18100
             inicio_test = fin_val+1
-            fin_test = inicio_test+1+11615
+            fin_test = inicio_test+1+11615#2903#11615
             # conjunto de validación
             Xval = X[inicio_val:fin_val]
             yval = y[inicio_val:fin_val]
@@ -242,39 +243,287 @@ if __name__ == "__main__":
 """
         import matplotlib.pyplot as plt
 
-    # Definir el rango que deseas graficar
-    start = 0  # Índice inicial
-    end = 11616  # Índice final
-    
+   # Definir índices de rango
+        start = 0
+        end = fin_test - inicio_test 
+        x = np.arange(start, end)
 
-    # Calcular errores
-    error = ytest - prediccionestest
+        # Calcular errores
+        error = ytest - prediccionestest
 
-    # Graficar el error
-    plt.figure(figsize=(12, 5))
-    x = np.arange(start, end)
-    plt.plot(x, error, label='Errores', color='blue')
-    plt.title(f"Error (Índices {start} a {end})")
-    plt.xlabel('Índice')
-    plt.ylabel('Valor')
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+        # Calcular errores con predicción desplazada una unidad hacia atrás
+        pred_shift = prediccionestest[:-1]
+        ytest_shift = ytest[1:]  # para que coincida en tamaño
+        error_shift = ytest_shift - pred_shift
+        x_shift = np.arange(len(error_shift))
 
-   
-    # Graficar valores reales vs predicciones
-    plt.figure(figsize=(12, 5))
-    plt.plot(x, ytest[:,0], label='Original', color='blue')
-    start = 0  # Índice inicial
-    end = 11615
-    x = np.arange(start, end)
-    plt.plot(x, prediccionestest[1:,0], label='Predicciones', color='red')
+        # Crear figura con subplots
+        fig, axs = plt.subplots(3, 1, figsize=(12, 12))
 
-    plt.title(f"Comparación Valores Reales y Predicciones (Índices {start} a {end})")
-    plt.xlabel('Índice')
-    plt.ylabel('Valor')
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+        # Subplot 1: Error normal
+        axs[0].plot(x, error[:, 0], label='Error', color='blue')
+        axs[0].set_title('Error entre predicciones y valores reales')
+        axs[0].set_xlabel('Índice')
+        axs[0].set_ylabel('Error')
+        axs[0].legend()
+        axs[0].grid(True)
+
+        # Subplot 2: Error con predicción desplazada
+        axs[1].plot(x_shift, error_shift[:, 0], label='Error (predicción desplazada)', color='orange')
+        axs[1].set_title('Error con predicción desplazada una unidad hacia atrás')
+        axs[1].set_xlabel('Índice')
+        axs[1].set_ylabel('Error desplazado')
+        axs[1].legend()
+        axs[1].grid(True)
+
+        # Subplot 3: Comparación entre predicción normal y desplazada
+        axs[2].plot(x, prediccionestest[:, 0], label='Predicción original', color='red')
+        axs[2].plot(x_shift, pred_shift[:, 0], label='Predicción desplazada', color='green', linestyle='--')
+        axs[2].set_title('Comparación entre predicción original y desplazada')
+        axs[2].set_xlabel('Índice')
+        axs[2].set_ylabel('Valor predicho')
+        axs[2].legend()
+        axs[2].grid(True)
+
+        plt.tight_layout()
+        plt.show()
 
 
+
+persistentes = 0
+total_predicciones = len(ytest)
+
+for i in range(1, total_predicciones):
+    valor_anterior = ytest[i - 1][-1]  # último timestep del anterior real
+    prediccion = prediccionestest[i][-1]  # último timestep del actual predicho
+
+    if valor_anterior == 0:
+        continue  # evitamos división por cero
+
+    margen_inferior = valor_anterior * 0.99
+    margen_superior = valor_anterior * 1.01
+
+    if margen_inferior <= prediccion <= margen_superior:
+        persistentes += 1
+
+porcentaje_persistencia = (persistentes / (total_predicciones - 1)) * 100  # -1 porque empezamos en i=1
+
+print(f"Total de predicciones: {total_predicciones}")
+print(f"Cantidad de predicciones persistentes: {persistentes}")
+print(f"Porcentaje de persistencia: {porcentaje_persistencia:.2f}%")
+
+
+
+fig, axs = plt.subplots(3, 1, figsize=(12, 12))
+start = 0
+end = fin_test - inicio_test 
+x = np.arange(start, end)
+
+        # Calcular errores
+error = ytest - prediccionestest
+
+        # Calcular errores con predicción desplazada una unidad hacia atrás
+pred_shift = prediccionestest[:-1]
+ytest_shift = ytest[1:]  # para que coincida en tamaño
+error_shift = ytest_shift - pred_shift
+x_shift = np.arange(len(error_shift))
+
+        # Crear figura con subplots
+x= np.arange(len(ytest))
+axs[0].plot(x, ytest[:, 0], label='Real', color='blue')
+axs[0].plot(x, prediccionestest[:, 0], label='Predicción', color='orange')
+axs[0].set_title('Predicciones vs Valores reales')
+axs[0].set_xlabel('Índice')
+axs[0].set_ylabel('Valor')
+axs[0].legend()
+axs[0].grid(True)
+
+# Segundo subplot: ytest desplazado 1 hacia atrás vs predicción desplazada 1 hacia adelante
+y_real_shift = ytest[:-1, 0]               # valores reales sin el último
+y_pred_shift = prediccionestest[1:, 0]     # predicciones desde el índice 1
+x_shift = np.arange(len(y_real_shift))
+
+axs[1].plot(x_shift, y_real_shift, label='Real (t)', color='blue')
+axs[1].plot(x_shift, y_pred_shift, label='Predicción (t+1)', color='orange')
+axs[1].set_title('Predicción en t+1 vs valor real en t')
+axs[1].set_xlabel('Índice')
+axs[1].set_ylabel('Valor')
+axs[1].legend()
+axs[1].grid(True)
+
+# Tercer subplot opcional: error absoluto desplazado
+error_shift = y_real_shift - y_pred_shift
+axs[2].plot(x_shift, error_shift, label='Error (t+1 - t)', color='green')
+axs[2].set_title('Error desplazado entre predicción y valor real anterior')
+axs[2].set_xlabel('Índice')
+axs[2].set_ylabel('Error')
+axs[2].legend()
+axs[2].grid(True)
+
+plt.tight_layout()
+plt.show()
+
+
+
+persistentes = 0
+total_predicciones = len(ytest)
+
+for i in range(1, total_predicciones):
+    valor_anterior = ytest[i - 1,0]
+    prediccion = prediccionestest[i,0]
+
+    if valor_anterior == 0:
+        continue  # evitamos división por cero
+
+    margen_inferior = valor_anterior * 0.995
+    margen_superior = valor_anterior * 1.005
+
+    if margen_inferior <= prediccion <= margen_superior:
+        persistentes += 1
+
+porcentaje_persistencia = (persistentes / (total_predicciones - 1)) * 100  # -1 porque empezamos desde i=1
+
+print(f"Total de predicciones: {total_predicciones}")
+print(f"Cantidad de predicciones persistentes: {persistentes}")
+print(f"Porcentaje de persistencia al +-0.5%: {porcentaje_persistencia:.2f}%")
+
+
+
+persistentes = 0
+total_predicciones = len(ytest)
+
+for i in range(1, total_predicciones):
+    valor_anterior = ytest[i - 1,0]
+    prediccion = prediccionestest[i,0]
+
+    if valor_anterior == 0:
+        continue  # evitamos división por cero
+
+    margen_inferior = valor_anterior * 0.99
+    margen_superior = valor_anterior * 1.01
+
+    if margen_inferior <= prediccion <= margen_superior:
+        persistentes += 1
+
+porcentaje_persistencia = (persistentes / (total_predicciones - 1)) * 100  # -1 porque empezamos desde i=1
+
+print(f"Total de predicciones: {total_predicciones}")
+print(f"Cantidad de predicciones persistentes: {persistentes}")
+print(f"Porcentaje de persistencia al +-1%: {porcentaje_persistencia:.2f}%")
+
+
+
+persistentes = 0
+total_predicciones = len(ytest)
+
+for i in range(1, total_predicciones):
+    valor_anterior = ytest[i - 1,0]
+    prediccion = prediccionestest[i,0]
+
+    if valor_anterior == 0:
+        continue  # evitamos división por cero
+
+    margen_inferior = valor_anterior * 0.98
+    margen_superior = valor_anterior * 1.02
+
+    if margen_inferior <= prediccion <= margen_superior:
+        persistentes += 1
+
+porcentaje_persistencia = (persistentes / (total_predicciones - 1)) * 100  # -1 porque empezamos desde i=1
+
+print(f"Total de predicciones: {total_predicciones}")
+print(f"Cantidad de predicciones persistentes: {persistentes}")
+print(f"Porcentaje de persistencia al +-2%: {porcentaje_persistencia:.2f}%")
+
+
+print("aAAAAAAAAAAAAAAAAA")
+
+
+
+persistentes = 0
+total_predicciones = len(ytest)
+total_filtrados = 0  # para contar solo los casos con diferencia ≤ 4 kW
+
+for i in range(1, total_predicciones):
+    valor_anterior = ytest[i - 1, 0]
+    valor_real = ytest[i, 0]
+    prediccion = prediccionestest[i, 0]
+
+    if valor_anterior == 0:
+        continue  # evitamos división por cero
+
+    diferencia_real = abs(valor_real - valor_anterior)
+
+    # Solo consideramos casos con diferencia ≤ 4 kW entre valor real y valor anterior
+    if diferencia_real >= 4:
+        total_filtrados += 1
+
+        margen_inferior = valor_anterior * 0.99
+        margen_superior = valor_anterior * 1.01
+
+        if margen_inferior <= prediccion <= margen_superior:
+            persistentes += 1
+
+if total_filtrados > 0:
+    porcentaje_persistencia = (persistentes / total_filtrados) * 100
+else:
+    porcentaje_persistencia = 0
+
+print(f"Total de predicciones: {total_predicciones}")
+print(f"Total de casos con diferencia real ≤ 4 kW: {total_filtrados}")
+print(f"Cantidad de predicciones persistentes en esos casos: {persistentes}")
+print(f"Porcentaje de persistencia al ±1% en esos casos: {porcentaje_persistencia:.2f}%")
+
+mejor_que_persistente = 0
+total_comparaciones = 0
+
+# solo iteramos filas, desde la 1 porque necesitamos valor anterior para comparar
+for i in range(1, ytest.shape[0]):
+    valor_real = ytest[i, -1]         # último paso real
+    valor_anterior = ytest[i - 1, -1] # último paso persistente (valor anterior mismo paso)
+    pred_modelo = prediccionestest[i, -1]  # último paso predicho
+
+    error_modelo = abs(valor_real - pred_modelo)
+    error_persistente = abs(valor_anterior - pred_modelo)
+
+    if error_modelo < error_persistente:
+        mejor_que_persistente += 1
+
+    total_comparaciones += 1
+
+porcentaje_mejora = (mejor_que_persistente / total_comparaciones) * 100
+
+print(f"Total de comparaciones (última columna): {total_comparaciones}")
+print(f"Cantidad mejores que persistente: {mejor_que_persistente}")
+print(f"Porcentaje de mejora sobre persistencia: {porcentaje_mejora:.2f}%")
+
+
+
+mejor_que_persistente = 0
+total_comparaciones = 0
+
+for i in range(1, ytest.shape[0]):
+    valor_real = ytest[i, -1]            # último paso real
+    valor_anterior = ytest[i - 1, -1]   # último paso persistente (valor anterior mismo paso)
+    pred_modelo = prediccionestest[i, -1]  # último paso predicho
+
+    diferencia_real = abs(valor_real - valor_anterior)
+
+    # Solo comparar si diferencia real es >= 4 kW
+    if diferencia_real >= 9:
+        error_modelo = abs(valor_real - pred_modelo)
+        error_persistente = abs(pred_modelo - valor_anterior)  # acá corregí para comparar con valor real, no con predicción
+
+        if error_modelo < error_persistente:
+            mejor_que_persistente += 1
+
+        total_comparaciones += 1
+
+if total_comparaciones > 0:
+    porcentaje_mejora = (mejor_que_persistente / total_comparaciones) * 100
+else:
+    porcentaje_mejora = 0
+
+print(f"Total de comparaciones (última columna, dif ≥ 5kW): {total_comparaciones}")
+print(f"Cantidad mejores que persistente: {mejor_que_persistente}")
+print(f"Porcentaje de mejora sobre persistencia: {porcentaje_mejora:.2f}%")

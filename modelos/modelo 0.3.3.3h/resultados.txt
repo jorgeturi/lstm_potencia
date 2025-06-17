@@ -1,0 +1,17 @@
+Error promedio global: 0.32
+Desviación estándar global: 2.94
+Error relativo porcentual promedio global: 7.35%
+El error más grande cometido: 23.92191613769532
+cantidad de datos: 2887
+p < 1 : 41.22
+p < 2 : 68.41
+p < 3 : 81.40
+p < 4 : 86.98
+p < 5 : 91.10
+MAPE por columna: [7.350628682643507]
+
+R² por columna: [0.9592485742215121]
+
+MAE por columna: ['1.96']
+
+Desviación estándar por columna: ['2.94']

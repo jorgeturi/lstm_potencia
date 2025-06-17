@@ -252,6 +252,41 @@ def cargar_datos(archivo_potencias='potencias.csv', archivo_corrientes='corrient
         return None
 
 
+def crear_ventana4(dataset, ventana_entrada, ventana_salida, mediciones_previas):
+    logging.info("Creando ventanas.")
+    print("el dataset es", dataset.shape)
+    # Agregar las columnas t-1, t-2, t-3, t-4 al DataFrame
+    for i in range(0, mediciones_previas):  # Empieza desde 1 hasta ventana_entrada (incluye 8 si ventana_entrada = 8)
+        dataset[f'activa_t-{i}'] = dataset['activa'].shift(i)
+
+    # Eliminar las filas con valores nulos causados por el desplazamiento
+    dataset = dataset.dropna()
+
+
+    # Extraer las características necesarias (t-4, t-3, t-2, t-1 y t)
+    columnas_necesarias = [f'activa_t-{i}' for i in range(0,mediciones_previas)] + ['dia_sen'] + ['dia_cos'] + ['mes_sen'] + ['mes_cos'] #+ ['dia_habil'] 
+
+    #columnas_necesarias = [f'activa_t-{i}' for i in range(0,mediciones_previas)] + ['pico'] + ['dia_sen'] + ['dia_cos'] + ['mes_sen'] + ['mes_cos'] +['l1'] +['l2'] + ['l3']
+    #columnas_necesarias = [f'activa_t-{i}' for i in range(0,mediciones_previas)] + ['pico'] +['l1'] +['l2'] + ['l3']
+
+    # Incluir las columnas necesarias en el DataFrame
+    features = dataset[columnas_necesarias].values
+
+    # Calcular el número total de ventanas que se pueden crear
+    total_muestras = len(dataset) - ventana_entrada - ventana_salida + 1
+
+    # Ventanas de entrada (características de t-4, t-3, t-2, t-1 y t)
+    X = np.array([features[i:i + ventana_entrada] for i in range(total_muestras)])
+
+    # Ventanas de salida (valor futuro de la potencia activa)
+    y = np.array([dataset['activa'].values[i+ventana_entrada :i+ventana_entrada + ventana_salida] for i in range(total_muestras)])
+    #y = np.array([dataset['activa'].values[i + ventana_entrada : i + ventana_entrada + ventana_salida] for i in range(total_muestras)])
+    #y = y.reshape(-1, ventana_entrada-1, ventana_salida)
+    #y = np.array([dataset['activa'].values[i + ventana_entrada-1] for i in range(total_muestras)])
+    #y = y.reshape(-1,1)
+    logging.info("Ventanas creadas")
+
+    return X, y
 
 import pandas as pd
 import numpy as np
@@ -266,6 +301,7 @@ import numpy as np
 import logging
 
 def cargar_datos_especificos(archivo_potencias='potencias.csv', dias_semanales=None, horas=None):
+    print("estoy cargando desde lstmpotencia")
     """
     Carga los datos desde el archivo CSV de potencias, filtra según días de la semana y horas, y registra el resultado en el log.
 
@@ -319,7 +355,8 @@ def cargar_datos_especificos(archivo_potencias='potencias.csv', dias_semanales=N
         # Filtrar por horas
         if horas is not None:
             potencias = potencias[potencias['timestamp'].dt.hour.isin(horas)]
-
+        
+        #potencias = potencias.groupby(potencias['timestamp'].dt.floor('h')).first()
         # Calcular la diferencia con el valor anterior en la columna 'activa'
         #potencias['diferencia_activa'] = potencias['activa'].diff()
 
@@ -327,7 +364,7 @@ def cargar_datos_especificos(archivo_potencias='potencias.csv', dias_semanales=N
         #potencias['numero_de_medicion'] = range(1, len(potencias) + 1)
 
         # Seleccionar y reorganizar las columnas en el formato deseado
-        final_df = potencias[['activa', 'dia_sen', 'dia_cos', 'mes_sen', 'mes_cos']]
+        final_df = potencias[['activa', 'dia_sen', 'dia_cos', 'mes_sen', 'mes_cos', 'timestamp']]
         #final_df = potencias[['activa']]
 
         logging.info(f"Datos cargados y filtrados. Total de registros: {len(final_df)}")

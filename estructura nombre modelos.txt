@@ -5,9 +5,9 @@ C (id batch size usado)
 D (id variación)
 
 A
-0 = 4
-1 = 24
-2 = 48
+0 = 4 (1 h)
+1 = 24 (6 h)
+2 = 48 (12 h)
 
 B
 0 = 4 (1 h)
